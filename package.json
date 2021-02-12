@@ -1,0 +1,38 @@
+{
+  "name": "fastify-agenda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "dev:watch": "NODE_ENV=development nodemon server.js",
+    "lint": "standard .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest && npm run lint",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.9.2",
+    "fastify-autoload": "^3.3.1",
+    "fastify-swagger": "^3.5.0",
+    "fluent-schema": "^1.1.0",
+    "http-errors": "^1.8.0"
+  },
+  "devDependencies": {
+    "fastify-plugin": "^3.0.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "pino-pretty": "^4.3.0",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ]
+  }
+}
